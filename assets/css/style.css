@@ -548,7 +548,13 @@ main {
     font-weight: 600; }
 
 
-
+.coming-soon-link small {
+  display: inline;
+  margin-left: 3px;
+  color: #d97706;
+  font-size: 9px;
+  font-weight: 600;
+}
 
 
 

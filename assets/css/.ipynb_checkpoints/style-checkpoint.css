@@ -445,7 +445,36 @@ main {
   opacity: 1;
   visibility: visible;
 }
+.sidebar,
+.sidebar-info_more {
+  font-family: "Inter", "Segoe UI", Arial, sans-serif;
+}
 
+.sidebar .name {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: -0.5px;
+}
+
+.sidebar .title {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.sidebar .contact-title {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.6px;
+}
+
+.sidebar .contact-link,
+.sidebar .contact-info address {
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.45;
+}
 .contacts-list {
   display: grid;
   grid-template-columns: 1fr;
@@ -462,39 +491,59 @@ main {
 .contact-info {
   max-width: calc(100% - 46px);
   width: calc(100% - 46px);
+  font-family: "Inter", "Segoe UI", Arial, sans-serif;
 }
 
 .contact-title {
   color: var(--light-gray-70);
-  font-size: var(--fs-8);
+  font-family: inherit;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: 0.6px;
   text-transform: uppercase;
-  margin-bottom: 2px;
+  margin-bottom: 4px;
 }
 
 .contact-info :is(.contact-link, time, address) {
   color: var(--white-2);
-  font-size: var(--fs-7);
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.45;
 }
 
-.contact-info address { font-style: normal; }
+.contact-info .contact-link {
+  transition: color 0.2s ease;
+}
+
+.contact-info .contact-link:hover {
+  color: var(--orange-yellow-crayola);
+}
+
+.contact-info address {
+  font-style: normal;
+}
 
 .social-list {
   display: flex;
   justify-content: flex-start;
   align-items: center;
   gap: 15px;
-  padding-bottom: 4px;
-  padding-left: 7px;
+  padding: 4px 0 4px 7px;
 }
 
 .social-item .social-link {
   color: var(--light-gray-70);
   font-size: 18px;
+  transition: color 0.2s ease,
+              transform 0.2s ease;
 }
 
-
-.social-item .social-link:hover { color: var(--light-gray); }
-
+.social-item .social-link:hover {
+  color: var(--orange-yellow-crayola);
+  transform: translateY(-2px);
+}
 
 
 
@@ -548,7 +597,13 @@ main {
     font-weight: 600; }
 
 
-
+.coming-soon-link small {
+  display: inline;
+  margin-left: 3px;
+  color: #d97706;
+  font-size: 9px;
+  font-weight: 600;
+}
 
 
 
